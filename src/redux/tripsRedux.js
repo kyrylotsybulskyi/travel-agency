@@ -21,10 +21,10 @@ export const getFilteredTrips = ({trips, filters}) => {
 };
 
 export const getTripById = ({trips}, tripId) => {
-  const filtered = trips;
+  const filtered = trips.filter(trip => trip.id == tripId);
 
   // TODO - filter trips by tripId
-
+  
   console.log('filtering trips by tripId:', tripId, filtered);
   return filtered.length ? filtered[0] : {error: true};
 };
